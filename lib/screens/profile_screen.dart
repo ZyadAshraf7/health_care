@@ -8,19 +8,13 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  TextEditingController nameController = TextEditingController(text: "Mohamed Ibrahim");
-  bool nameEdit = false;
-  TextEditingController emailController = TextEditingController(text: "Mohamed.Ibrahim@gmail.com");
-  bool emailEdit = false;
-  TextEditingController phoneController = TextEditingController(text: "+20123456789");
-  bool phoneEdit = false;
-  TextEditingController medicalHistoryController = TextEditingController(text: "Lorem Ipsum");
-  bool medicalHistoryEdit = false;
-  TextEditingController bloodGroupController = TextEditingController(text: "A+");
-  bool bloodGroupEdit = false;
-  TextEditingController birthDateController = TextEditingController(text: "23/7/1999");
-  bool birthDateEdit = false;
-
+  String name = "Mohamed Ibrahim";
+  String email = "Mohamed.Ibrahim@gmail.com";
+  String phone = "+20123456789";
+  String medicalHistory = "Lorem Ipsum";
+  String bloodGroup = "A+";
+  String birthDate = "23/3/1999";
+  String gender = "Male";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,139 +42,43 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ListTile(
                 leading: Icon(Icons.person),
                 title: Text("Name"),
-                trailing: IconButton(onPressed: (){
-                  setState(() {
-                    nameEdit=true;
-                  });
-                }, icon: Icon(Icons.edit)),
-                subtitle: TextFormField(
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey.shade600
-                  ),
-                  controller: nameController,
-                  enabled: nameEdit,
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.zero
-                  ),
-                ),
+                subtitle: Text(name)
               ),
               SizedBox(height: 12),
               ListTile(
                 leading: Icon(Icons.email),
                 title: Text("Email"),
-                trailing: IconButton(onPressed: (){
-                  setState(() {
-                    emailEdit=true;
-                  });
-                }, icon: Icon(Icons.edit)),
-                subtitle: TextFormField(
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey.shade600
-                  ),
-                  controller: emailController,
-                  enabled: emailEdit,
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.zero
-                  ),
-                ),
+                subtitle: Text(email)
               ),
               SizedBox(height: 12),
               ListTile(
                 leading: Icon(Icons.call),
                 title: Text("Phone number"),
-                trailing: IconButton(onPressed: (){
-                  setState(() {
-                    phoneEdit=true;
-                  });
-                }, icon: Icon(Icons.edit)),
-                subtitle: TextFormField(
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey.shade600
-                  ),
-                  controller: phoneController,
-                  enabled: phoneEdit,
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.zero
-                  ),
-                ),
+                subtitle: Text(phone)
               ),
               SizedBox(height: 12),
               ListTile(
                 leading: Icon(Icons.local_hospital),
                 title: Text("Medical History"),
-                trailing: IconButton(onPressed: (){
-                  setState(() {
-                    medicalHistoryEdit=true;
-                  });
-                }, icon: Icon(Icons.edit)),
-                subtitle: TextFormField(
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey.shade600
-                  ),
-                  controller: medicalHistoryController,
-                  enabled: medicalHistoryEdit,
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.zero
-                  ),
-                ),
+                subtitle: Text(medicalHistory)
               ),
               SizedBox(height: 12),
               ListTile(
                 leading: Icon(Icons.local_hospital),
                 title: Text("Blood Group"),
-                trailing: IconButton(onPressed: (){
-                  setState(() {
-                    bloodGroupEdit=true;
-                  });
-                }, icon: Icon(Icons.edit)),
-                subtitle:TextFormField(
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey.shade600
-                  ),
-                  controller: bloodGroupController,
-                  enabled: bloodGroupEdit,
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.zero
-                  ),
-                ),
+                subtitle: Text(bloodGroup)
               ),
               SizedBox(height: 12),
               ListTile(
                 leading: Icon(Icons.calendar_month),
                 title: Text("Birth Date"),
-                trailing: IconButton(onPressed: (){
-                  setState(() {
-                    birthDateEdit=true;
-                  });
-                }, icon: Icon(Icons.edit)),
-                subtitle: TextFormField(
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey.shade600
-                  ),
-                  controller: birthDateController,
-                  enabled: birthDateEdit,
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.zero
-                  ),
-                ),
+                subtitle: Text(birthDate)
               ),
               SizedBox(height: 12),
               ListTile(
                 leading: Icon(Icons.person_pin),
                 title: Text("Gender"),
-                subtitle: Text("Male"),
+                subtitle: Text(gender),
               ),
             ],
           ),

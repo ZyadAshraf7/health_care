@@ -23,62 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: Colors.blue,
       ),
-      drawer: SafeArea(
-        child: Drawer(
-          child: Column(
-            children: [
-              ListTile(
-                onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (_) => const ProfileScreen()));
-                },
-                leading: Icon(
-                  Icons.person,
-                  size: 24,
-                  color: Colors.grey.shade800,
-                ),
-                title:  Text(
-                  "Profile",
-                  style: TextStyle(
-                      color: Colors.grey.shade800,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w500),
-                ),
-              ),
-              ListTile(
-                onTap: () {},
-                leading: Icon(
-                  Icons.settings,
-                  size: 24,
-                  color: Colors.grey.shade800,
-                ),
-                title: Text(
-                  "Settings",
-                  style: TextStyle(
-                      color: Colors.grey.shade800,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w500),
-                ),
-              ),
-              ListTile(
-                onTap: () {},
-                leading:  Icon(
-                  Icons.logout,
-                  size: 24,
-                  color: Colors.grey.shade800,
-                ),
-                title: Text(
-                  "Sign out",
-                  style: TextStyle(
-                      color:Colors.grey.shade800,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w500),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         child: ListView(
